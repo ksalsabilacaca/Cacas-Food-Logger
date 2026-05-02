@@ -16,7 +16,8 @@ app.get("/", (req, res) => {
 
 const PORT = 5000;
 
-connectDB();
-
 const serverless = require("serverless-http");
-module.exports = serverless(app);
+module.exports = async (req, res) => {
+  await connectDB();
+  return serverless(app)(req, res);
+};
