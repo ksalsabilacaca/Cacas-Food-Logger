@@ -10,9 +10,9 @@ const {
 } = require("../controllers/foodController");
 
 router.post("/", createFood);
+router.get("/summary", getSummary);
 router.get("/", getFoods);
 router.put("/:id", updateFood);
 router.delete("/:id", deleteFood);
-router.get("/summary", getSummary);
 
 module.exports = router;
