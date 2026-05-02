@@ -7,13 +7,13 @@ function ListPage() {
   const navigate = useNavigate();
 
   const fetchFoods = async () => {
-    const res = await fetch("http://localhost:5000/api/foods");
+    const res = await fetch(`${process.env.REACT_APP_API_URL}/api/foods`);
     const data = await res.json();
     setFoods(data);
   };
 
   const deleteFood = async (id) => {
-    await fetch(`http://localhost:5000/api/foods/${id}`, {
+    await fetch(`${process.env.REACT_APP_API_URL}/api/foods/${id}`, {
       method: "DELETE",
     });
     fetchFoods();

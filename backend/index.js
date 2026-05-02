@@ -18,6 +18,5 @@ const PORT = 5000;
 
 connectDB();
 
-app.listen(PORT, () => {
-  console.log(`Server jalan di http://localhost:${PORT}`);
-});
+const serverless = require("serverless-http");
+module.exports = serverless(app);

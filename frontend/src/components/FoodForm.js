@@ -51,14 +51,14 @@ function FoodForm({ fetchFoods, fetchSummary, editingFood }) {
     };
 
     if (editingFood) {
-        await fetch(`http://localhost:5000/api/foods/${editingFood._id}`, {
+        await fetch(`${process.env.REACT_APP_API_URL}/api/foods/${editingFood._id}`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(payload),
     });
         navigate("/list");
     } else {
-      await fetch("http://localhost:5000/api/foods", {
+      await fetch(`${process.env.REACT_APP_API_URL}/api/foods`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

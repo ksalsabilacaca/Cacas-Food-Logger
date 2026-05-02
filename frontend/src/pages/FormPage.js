@@ -14,7 +14,7 @@ function FormPage() {
 
     const fetchSummary = useCallback(async () => {
     const res = await fetch(
-        `http://localhost:5000/api/foods/summary?range=${range}`
+        `${process.env.REACT_APP_API_URL}/api/foods/summary?range=${range}`
     );
     const data = await res.json();
     setSummary(data);
