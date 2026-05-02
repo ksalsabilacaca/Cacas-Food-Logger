@@ -8,7 +8,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.use("/api/foods", foodRoutes);
+app.use("/foods", foodRoutes);
 
 app.get("/", (req, res) => {
   res.send("API jalan nich");
