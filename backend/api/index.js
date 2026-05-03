@@ -16,6 +16,9 @@ app.get("/api", (req, res) => {
 
 app.use("/api/foods", foodRoutes);
 
-connectDB();
+const handler = serverless(app);
 
-module.exports = serverless(app);
+module.exports = async (req, res) => {
+  await connectDB();
+  return handler(req, res);
+};
