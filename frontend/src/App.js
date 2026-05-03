@@ -27,17 +27,21 @@ function App() {
           </div>
         </div>
 
-        <div className="hero-bg">
-          <h1>Welcome to My Food Logger</h1>
-          <p>Track meals, stay healthy, and keep wallets happy</p>
-        </div>
-
         <div className="content">
-          <div className="container">
-            <Routes>
-              <Route path="/" element={<FormPage />} />
-              <Route path="/list" element={<ListPage />} />
-            </Routes>
+          <div className="main">
+            
+            <div className="hero-bg">
+              <h1>Welcome to My Food Logger</h1>
+              <p>Track meals, stay healthy, and keep wallets happy</p>
+            </div>
+
+            <div className="container">
+              <Routes>
+                <Route path="/" element={<FormPage />} />
+                <Route path="/list" element={<ListPage />} />
+              </Routes>
+            </div>
+
           </div>
         </div>
 
