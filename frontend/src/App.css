@@ -362,8 +362,14 @@
     border-radius: 20px;
   }
 
+  .hero-bg {
+    margin-top: 8px;
+    margin-bottom: 4px;
+  }
+
   .container {
     border-radius: 14px;
+    margin: 4px auto 16px;
   }
 
   .btn {
