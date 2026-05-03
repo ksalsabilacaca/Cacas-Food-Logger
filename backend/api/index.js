@@ -1,12 +1,12 @@
 const express = require("express");
 const cors = require("cors");
-const foodRoutes = require("../backend/routes/foodRoutes");
-const connectDB = require("../backend/config/db");
+const foodRoutes = require("../routes/foodRoutes");
+const connectDB = require("../config/db");
 const serverless = require("serverless-http");
 
 const app = express();
 
-connectDB(); 
+connectDB();
 
 app.use(cors());
 app.use(express.json());
@@ -17,4 +17,6 @@ app.get("/", (req, res) => {
   res.send("API jalan nich");
 });
 
-module.exports = serverless(app);
+const handler = serverless(app);
+
+module.exports = handler;
