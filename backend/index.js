@@ -9,6 +9,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get("/test", (req, res) => {
+  res.send("OK TEST");
+});
+
 app.get("/", (req, res) => {
   res.send("API jalan nich");
 });
@@ -16,6 +20,7 @@ app.get("/", (req, res) => {
 app.use("/api/foods", foodRoutes);
 
 const PORT = process.env.PORT || 5000;
+console.log("ENV PORT:", process.env.PORT);
 
 const startServer = async () => {
   try {
