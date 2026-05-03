@@ -335,6 +335,10 @@
     margin: 6px auto 20px;
   }
 
+  .content {
+    align-items: flex-start;
+  }
+
   .hero-bg h1 {
     font-size: 24px;
   }
