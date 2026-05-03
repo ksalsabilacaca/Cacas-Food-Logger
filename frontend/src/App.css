@@ -337,8 +337,9 @@
 
   .content {
     align-items: flex-start;
+    padding-top: 10px;
+    padding-bottom: 20px;
   }
-
   .hero-bg h1 {
     font-size: 24px;
   }
