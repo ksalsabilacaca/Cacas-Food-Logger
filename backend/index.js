@@ -9,10 +9,6 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get("/test", (req, res) => {
-  res.send("OK TEST");
-});
-
 app.get("/", (req, res) => {
   res.send("API jalan nich");
 });
