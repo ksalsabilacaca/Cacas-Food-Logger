@@ -108,8 +108,8 @@
 }
 
 .hero-bg {
-  position: absolute;
-  top: 130px;
+  margin-top: 30px;
+  margin-bottom: 12px;
   width: 100%;
   text-align: center;
   pointer-events: none;
@@ -162,6 +162,8 @@
 
 .summary-content {
   display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
   justify-content: center; 
   gap: 40px;               
   align-items: center;
@@ -191,8 +193,9 @@
 }
 
 .container {
-  width: 420px;
-  margin: 110px auto 40px;
+  width: 90%;
+  max-width: 420px;
+  margin: 20px auto 40px;
   padding: 28px;
   border-radius: 18px;
   background: var(--card);
@@ -307,4 +310,64 @@
 
 .dark .footer {
   background: linear-gradient(135deg, #2a2a2e, #1f1f23);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 15px;
+    height: 55px;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .nav-right {
+    gap: 12px;
+  }
+
+  .hero-bg {
+    margin-top: 8px;
+    margin-bottom: 12px;
+  }
+
+  .container {
+    margin: 6px auto 20px;
+  }
+
+  .hero-bg h1 {
+    font-size: 24px;
+  }
+
+  .hero-bg p {
+    font-size: 13px;
+  }
+
+  .summary-content {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: nowrap;
+  }
+
+  .summary-content span {
+    font-size: 12px;
+    text-align: center;
+    flex: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    border-radius: 20px;
+  }
+
+  .container {
+    border-radius: 14px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 10px;
+  }
 }
