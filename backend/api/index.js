@@ -16,7 +16,6 @@ app.get("/api", (req, res) => {
 
 app.use("/api/foods", foodRoutes);
 
-module.exports = async (req, res) => {
-  await connectDB();
-  return serverless(app)(req, res);
-};
+connectDB();
+
+module.exports = serverless(app);
