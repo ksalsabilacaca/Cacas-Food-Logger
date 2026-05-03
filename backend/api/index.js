@@ -19,6 +19,11 @@ app.use("/api/foods", foodRoutes);
 const handler = serverless(app);
 
 module.exports = async (req, res) => {
-  await connectDB();
-  return handler(req, res);
+  try {
+    await connectDB();
+    return handler(req, res);
+  } catch (err) {
+    console.error(err);
+    return res.status(500).json({ error: "DB connection failed" });
+  }
 };
