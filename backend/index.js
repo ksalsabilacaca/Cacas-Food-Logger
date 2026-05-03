@@ -15,10 +15,20 @@ app.get("/", (req, res) => {
 
 app.use("/api/foods", foodRoutes);
 
-connectDB();
-
 const PORT = process.env.PORT || 5000;
 
-app.listen(PORT, () => {
-  console.log("Server running on port", PORT);
-});
+const startServer = async () => {
+  try {
+    await connectDB();
+
+    app.listen(PORT, "0.0.0.0", () => {
+      console.log("Server running on port", PORT);
+    });
+
+  } catch (err) {
+    console.error("FAILED TO START SERVER:", err);
+    process.exit(1);
+  }
+};
+
+startServer();
