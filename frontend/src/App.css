@@ -333,7 +333,7 @@
   }
 
   .hero-bg {
-    margin-bottom: 6px;
+    transform: translateY(-15px);
   }
 
   .container {
