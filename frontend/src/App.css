@@ -327,17 +327,20 @@
   }
 
   .hero-bg {
-    margin-top: 8px;
-    margin-bottom: 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   .container {
-    margin: 6px auto 20px;
+    margin: 10px 0;
   }
 
   .content {
-    flex: none;
-    display: block;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center;
   }
 
   .hero-bg h1 {
@@ -347,7 +350,7 @@
   .app {
     min-height: auto;
   }
-  
+
   .hero-bg p {
     font-size: 13px;
   }
