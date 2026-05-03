@@ -327,15 +327,16 @@
   }
 
   .hero-bg {
-    margin-top: 10px;
-    margin-bottom: 6px;
+    margin-top: 8px;
+    margin-bottom: 12px;
   }
 
   .container {
-    margin: 0 auto 20px;
+    margin: 6px auto 20px;
   }
 
   .content {
+    flex: none;
     display: block;
   }
 
@@ -343,6 +344,10 @@
     font-size: 24px;
   }
 
+  .app {
+    min-height: auto;
+  }
+  
   .hero-bg p {
     font-size: 13px;
   }
