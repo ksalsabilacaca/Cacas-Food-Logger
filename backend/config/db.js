@@ -1,6 +1,9 @@
 const mongoose = require("mongoose");
 
 let isConnected = false;
+if (!process.env.MONGO_URI) {
+  throw new Error("MONGO_URI belum di set");
+}
 
 const connectDB = async () => {
   if (isConnected) return;
